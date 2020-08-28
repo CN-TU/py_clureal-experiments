@@ -37,7 +37,3 @@ Iglesias, F., Zseby, T., & Zimek, A. (2020). *Interpretability and Refinement of
 
 
 5. Folders [results-2d-Jun2020] and [results-multidim-Jun2020] contain the results used in the paper
-<<<<<<< HEAD
-
-=======
->>>>>>> c63a97f2cda9ba5b7b5e89eef1b554ae8e537499
