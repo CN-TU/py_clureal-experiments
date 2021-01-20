@@ -29,26 +29,25 @@ We provide here only the corresponding GT (labels). Please download the datasets
         52570,42476,8
         ...
 
-Later, place them in the corresponding folder before running the scripts. In the following table missing datasets are listed with their corresponding folder, GT_file name, expected final name and the direct link to the original source.
+Later, place them in the corresponding folder before running the scripts. In the following list missing datasets are listed with their corresponding folder, GT_file name, expected final name and the direct link to the original source.
 
-|  Folder  -------    |  GT file name  -------       |  Final name  ------- |  Link to the orig. source  -------------------------   |
-|-:-:-------- |-:-:---------------- | -:-:------------ | -:-:--------------------------------------------|
-| *data2d/*  | *a2_GT.csv*         | *a2.csv*         | http://cs.uef.fi/sipu/datasets/a2.txt           |
-| *data2d/*  | *a3_GT.csv*         | *a3.csv*         | http://cs.uef.fi/sipu/datasets/a3.txt           |
-| *data2d/*  | *s1_GT.csv*         | *s1.csv*         | http://cs.uef.fi/sipu/datasets/s1.txt           |
-| *data2d/*  | *s2_GT.csv*         | *s2.csv*         | http://cs.uef.fi/sipu/datasets/s2.txt           |
-| *data2d/*  | *s3_GT.csv*         | *s3.csv*         | http://cs.uef.fi/sipu/datasets/s3.txt           |
-| *data2d/*  | *unbalance_GT.csv*  | *unbalance.csv*  | http://cs.uef.fi/sipu/datasets/unbalance.txt    |
-| *dataMd/*  | *multidim_0002_GT*  | *multidim_0002*  | http://cs.uef.fi/sipu/datasets/data_dim_txt.zip |
-| *dataMd/*  | *multidim_0003_GT*  | *multidim_0003*  | http://cs.uef.fi/sipu/datasets/data_dim_txt.zip |
-| *dataMd/*  | *multidim_0005_GT*  | *multidim_0005*  | http://cs.uef.fi/sipu/datasets/data_dim_txt.zip |
-| *dataMd/*  | *multidim_0010_GT*  | *multidim_0010*  | http://cs.uef.fi/sipu/datasets/data_dim_txt.zip |
-| *dataMd/*  | *multidim_0015_GT*  | *multidim_0015*  | http://cs.uef.fi/sipu/datasets/data_dim_txt.zip |
-| *dataMd/*  | *multidim_0032_GT*  | *multidim_0032*  | http://cs.uef.fi/sipu/datasets/dim032.txt       |
-| *dataMd/*  | *multidim_0064_GT*  | *multidim_0064*  | http://cs.uef.fi/sipu/datasets/dim064.txt       |
-| *dataMd/*  | *multidim_0256_GT*  | *multidim_0256*  | http://cs.uef.fi/sipu/datasets/dim256.txt       |
-| *dataMd/*  | *multidim_0512_GT*  | *multidim_0512*  | http://cs.uef.fi/sipu/datasets/dim512.txt       |
-| *dataMd/*  | *multidim_1024_GT*  | *multidim_1024*  | http://cs.uef.fi/sipu/datasets/dim1024.txt      |
+-  **Folder  |  GT file name       |  Final name      | Link to the original source
+- *data2d/*  | *a2_GT.csv*         | *a2.csv*         | http://cs.uef.fi/sipu/datasets/a2.txt           |
+- *data2d/*  | *a3_GT.csv*         | *a3.csv*         | http://cs.uef.fi/sipu/datasets/a3.txt           |
+- *data2d/*  | *s1_GT.csv*         | *s1.csv*         | http://cs.uef.fi/sipu/datasets/s1.txt           |
+- *data2d/*  | *s2_GT.csv*         | *s2.csv*         | http://cs.uef.fi/sipu/datasets/s2.txt           |
+- *data2d/*  | *s3_GT.csv*         | *s3.csv*         | http://cs.uef.fi/sipu/datasets/s3.txt           |
+- *data2d/*  | *unbalance_GT.csv*  | *unbalance.csv*  | http://cs.uef.fi/sipu/datasets/unbalance.txt    |
+- *dataMd/*  | *multidim_0002_GT*  | *multidim_0002*  | http://cs.uef.fi/sipu/datasets/data_dim_txt.zip |
+- *dataMd/*  | *multidim_0003_GT*  | *multidim_0003*  | http://cs.uef.fi/sipu/datasets/data_dim_txt.zip |
+- *dataMd/*  | *multidim_0005_GT*  | *multidim_0005*  | http://cs.uef.fi/sipu/datasets/data_dim_txt.zip |
+- *dataMd/*  | *multidim_0010_GT*  | *multidim_0010*  | http://cs.uef.fi/sipu/datasets/data_dim_txt.zip |
+- *dataMd/*  | *multidim_0015_GT*  | *multidim_0015*  | http://cs.uef.fi/sipu/datasets/data_dim_txt.zip |
+- *dataMd/*  | *multidim_0032_GT*  | *multidim_0032*  | http://cs.uef.fi/sipu/datasets/dim032.txt       |
+- *dataMd/*  | *multidim_0064_GT*  | *multidim_0064*  | http://cs.uef.fi/sipu/datasets/dim064.txt       |
+- *dataMd/*  | *multidim_0256_GT*  | *multidim_0256*  | http://cs.uef.fi/sipu/datasets/dim256.txt       |
+- *dataMd/*  | *multidim_0512_GT*  | *multidim_0512*  | http://cs.uef.fi/sipu/datasets/dim512.txt       |
+- *dataMd/*  | *multidim_1024_GT*  | *multidim_1024*  | http://cs.uef.fi/sipu/datasets/dim1024.txt      |
 
 Alternatively, you can remove these datasets from the scripts. 
    
