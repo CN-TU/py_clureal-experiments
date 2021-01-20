@@ -31,7 +31,7 @@ We provide here only the corresponding GT (labels). Please download the datasets
 
 Later, place them in the corresponding folder before running the scripts. In the following list missing datasets are listed with their corresponding folder, GT_file name, expected final name and the direct link to the original source.
 
--  **Folder  |  GT file name       |  Final name      | Link to the original source
+-  **Folder  |  GT file name       |  Final name      | Link to the original source** |
 - *data2d/*  | *a2_GT.csv*         | *a2.csv*         | http://cs.uef.fi/sipu/datasets/a2.txt           |
 - *data2d/*  | *a3_GT.csv*         | *a3.csv*         | http://cs.uef.fi/sipu/datasets/a3.txt           |
 - *data2d/*  | *s1_GT.csv*         | *s1.csv*         | http://cs.uef.fi/sipu/datasets/s1.txt           |
