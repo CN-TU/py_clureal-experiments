@@ -38,7 +38,7 @@ def hdbs(m,e,s,x):
     return model
  
 def opt(m,e,s,x):
-    model = cluster.OPTICS(min_samples = int(m), eps = float(3*e), xi = x, min_cluster_size = s)
+    model = cluster.OPTICS(min_samples = int(m), xi = x, min_cluster_size = s)
     return model
 
 def select_algorithm(argument,m,e,s,x):
