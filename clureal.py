@@ -26,6 +26,7 @@ MIN_REL_DENSITY = -0.8
 MIN_CARDINALITY_R = 0.005
 OUTLIER_SENS = 0.75
 REP = 0
+PRUN_LEVEL = 0 #0:normal, 1:high class-overlap expected, 2: very-high class-overlap expected
 # ***** Symbolic Keys parameters *********
 SIMILAR_DENSITY_TH = 3
 RADII_RATIO_TH = 2
@@ -265,7 +266,7 @@ def rebuilt_labels(y):
     return y_new
 
 
-def graph_ref(X,y,kinship):
+def graph_ref(X,y,kinship,prun_level):
 
     kinship[kinship==5]=0
     G = nx.from_numpy_matrix(kinship)
@@ -276,9 +277,9 @@ def graph_ref(X,y,kinship):
 
     pos = nx.spring_layout(G)
     for edge in list(G.edges):
-        if G[edge[0]][edge[1]]["weight"] == 4: 
+        if G[edge[0]][edge[1]]["weight"] >= 4-prun_level: 
             G.remove_edge(edge[0], edge[1])
-        elif G[edge[0]][edge[1]]["weight"] == 3: 
+        elif G[edge[0]][edge[1]]["weight"] == 3-prun_level: 
             if multimodality(np.vstack((X[y==edge[0]],X[y==edge[1]]))):
                 G.remove_edge(edge[0], edge[1])
 
@@ -316,7 +317,7 @@ def reassign_outliers(X,y,out_sens,centroids,extR):
     ynew[y==-1]=yout
     return ynew
 
-def refine(X,y,cc,gv,rc,rep = REP, min_rdens = MIN_REL_DENSITY, min_mass = MIN_CARDINALITY_R, out_sens = OUTLIER_SENS):
+def refine(X,y,cc,gv,rc,rep = REP, min_rdens = MIN_REL_DENSITY, min_mass = MIN_CARDINALITY_R, out_sens = OUTLIER_SENS, prun_level = PRUN_LEVEL):
     # inputs
     #   X: dataset (nxm), matrix of n vectors with m dimensions
     #   y: array with cluster labels (-1 for outliers)
@@ -347,7 +348,7 @@ def refine(X,y,cc,gv,rc,rep = REP, min_rdens = MIN_REL_DENSITY, min_mass = MIN_C
             gv = gval(cc)
             rc = refinement_context(X,y,cc,gv)
 
-        y = graph_ref(X,y,rc.kinship)
+        y = graph_ref(X,y,rc.kinship, prun_level)
 
         cc = cluster_context(X,y)
         gv = gval(cc)
@@ -417,8 +418,10 @@ def multimodality(Xi):
         feat = Xi[:,i].reshape(-1,1)
         bw=(max(feat)-min(feat))/bwf
         if bw > 0:
-            x, y = FFTKDE(bw='silverman').fit(feat).evaluate(points)
-            #x, y = FFTKDE(bw=bwf).fit(feat).evaluate(points)
+            try:
+                x, y = FFTKDE(bw='silverman').fit(feat).evaluate(points)
+            except:
+                x, y = FFTKDE(bw=bwf).fit(feat).evaluate(points)
             peaks, _ = find_peaks(y, prominence=0.5)
             if len(peaks) > 1:
                 mm = 1

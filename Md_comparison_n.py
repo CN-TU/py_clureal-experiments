@@ -48,11 +48,11 @@ def select_algorithm(argument,m,e,s,x):
 
 
 ### LOG file
-data_names = ['close_1', 'close_10', 'close_11', 'close_12', 'close_13', 'close_14', 'close_15', 'close_16', 'close_17', 'close_18', 'close_19', 'close_2', 'close_20', 'close_3', 'close_4', 'close_5', 'close_6', 'close_7', 'close_8', 'close_9', 'complex_1', 'complex_10', 'complex_11', 'complex_12', 'complex_13', 'complex_14', 'complex_15', 'complex_16', 'complex_17', 'complex_18', 'complex_19', 'complex_2', 'complex_20', 'complex_3', 'complex_4', 'complex_5', 'complex_6', 'complex_7', 'complex_8', 'complex_9', 'dens-diff_1', 'dens-diff_10', 'dens-diff_11', 'dens-diff_12', 'dens-diff_13', 'dens-diff_14', 'dens-diff_15', 'dens-diff_16', 'dens-diff_17', 'dens-diff_18', 'dens-diff_19', 'dens-diff_2', 'dens-diff_20', 'dens-diff_3', 'dens-diff_4', 'dens-diff_5', 'dens-diff_6', 'dens-diff_7', 'dens-diff_8', 'dens-diff_9', 'high-noise_1', 'high-noise_10', 'high-noise_11', 'high-noise_12', 'high-noise_13', 'high-noise_14', 'high-noise_15', 'high-noise_16', 'high-noise_17', 'high-noise_18', 'high-noise_19', 'high-noise_2', 'high-noise_20', 'high-noise_3', 'high-noise_4', 'high-noise_5', 'high-noise_6', 'high-noise_7', 'high-noise_8', 'high-noise_9', 'low-noise_1', 'low-noise_10', 'low-noise_11', 'low-noise_12', 'low-noise_13', 'low-noise_14', 'low-noise_15', 'low-noise_16', 'low-noise_17', 'low-noise_18', 'low-noise_19', 'low-noise_2', 'low-noise_20', 'low-noise_3', 'low-noise_4', 'low-noise_5', 'low-noise_6', 'low-noise_7', 'low-noise_8', 'low-noise_9', 'multidim_0002', 'multidim_0003', 'multidim_0005', 'multidim_0010', 'multidim_0015', 'multidim_0032', 'multidim_0064', 'multidim_0256', 'multidim_0512', 'multidim_1024', 'separated_1', 'separated_10', 'separated_11', 'separated_12', 'separated_13', 'separated_14', 'separated_15', 'separated_16', 'separated_17', 'separated_18', 'separated_19', 'separated_2', 'separated_20', 'separated_3', 'separated_4', 'separated_5', 'separated_6', 'separated_7', 'separated_8', 'separated_9']
-sets_name = ['close','complex','dens-diff','high-noise','low-noise','multidim','separated']
+data_names = ['real_1','real_2','real_3','real_4','close_1', 'close_10', 'close_11', 'close_12', 'close_13', 'close_14', 'close_15', 'close_16', 'close_17', 'close_18', 'close_19', 'close_2', 'close_20', 'close_3', 'close_4', 'close_5', 'close_6', 'close_7', 'close_8', 'close_9', 'complex_1', 'complex_10', 'complex_11', 'complex_12', 'complex_13', 'complex_14', 'complex_15', 'complex_16', 'complex_17', 'complex_18', 'complex_19', 'complex_2', 'complex_20', 'complex_3', 'complex_4', 'complex_5', 'complex_6', 'complex_7', 'complex_8', 'complex_9', 'dens-diff_1', 'dens-diff_10', 'dens-diff_11', 'dens-diff_12', 'dens-diff_13', 'dens-diff_14', 'dens-diff_15', 'dens-diff_16', 'dens-diff_17', 'dens-diff_18', 'dens-diff_19', 'dens-diff_2', 'dens-diff_20', 'dens-diff_3', 'dens-diff_4', 'dens-diff_5', 'dens-diff_6', 'dens-diff_7', 'dens-diff_8', 'dens-diff_9', 'high-noise_1', 'high-noise_10', 'high-noise_11', 'high-noise_12', 'high-noise_13', 'high-noise_14', 'high-noise_15', 'high-noise_16', 'high-noise_17', 'high-noise_18', 'high-noise_19', 'high-noise_2', 'high-noise_20', 'high-noise_3', 'high-noise_4', 'high-noise_5', 'high-noise_6', 'high-noise_7', 'high-noise_8', 'high-noise_9', 'low-noise_1', 'low-noise_10', 'low-noise_11', 'low-noise_12', 'low-noise_13', 'low-noise_14', 'low-noise_15', 'low-noise_16', 'low-noise_17', 'low-noise_18', 'low-noise_19', 'low-noise_2', 'low-noise_20', 'low-noise_3', 'low-noise_4', 'low-noise_5', 'low-noise_6', 'low-noise_7', 'low-noise_8', 'low-noise_9', 'multidim_0002', 'multidim_0003', 'multidim_0005', 'multidim_0010', 'multidim_0015', 'multidim_0032', 'multidim_0064', 'multidim_0256', 'multidim_0512', 'multidim_1024', 'separated_1', 'separated_10', 'separated_11', 'separated_12', 'separated_13', 'separated_14', 'separated_15', 'separated_16', 'separated_17', 'separated_18', 'separated_19', 'separated_2', 'separated_20', 'separated_3', 'separated_4', 'separated_5', 'separated_6', 'separated_7', 'separated_8', 'separated_9']
+sets_name = ['real','close','complex','dens-diff','high-noise','low-noise','multidim','separated']
 algs = [ "hdbs", "opt"]
 methods = ['Best', 'CRAL']
-df_columns = ["Grex", "Gstr", "Gmin", "Sil", "CH", "DB","AMI","T"]
+df_columns = ["Grex", "Gstr", "Gmin", "Sil", "CH", "DB","AMI"]
 
 iterables = [data_names,algs,methods]
 df_index = pd.MultiIndex.from_product(iterables, names=['Data', 'Alg.','Method'])
@@ -70,7 +70,7 @@ for d_ind, d_name in enumerate(data_names):
     dataset = np.genfromtxt(file_name, delimiter=',')
     print("\n------- DATASET: ", d_name, "-------")
 
-    X, ygt = dataset[:,0:-2], dataset[:,-1].astype(int)
+    X, ygt = dataset[:,0:-1], dataset[:,-1].astype(int)
 
     dim_m, dim_n = X.shape
     p_outliers = False
@@ -116,7 +116,7 @@ for d_ind, d_name in enumerate(data_names):
 
         if sum(np.isnan(perf)==False)==0:
             best_e = 10*max(e)
-            best_x = 0.1
+            best_x = 0.08
             best_m = 5
         else:
             best_e = e[np.nanargmax(perf)]     
@@ -143,12 +143,13 @@ for d_ind, d_name in enumerate(data_names):
         df_val.loc[(d_name,a_name,'Best'), 'CH'] = CH
         df_val.loc[(d_name,a_name,'Best'), 'DB'] = DB
         df_val.loc[(d_name,a_name,'Best'), 'AMI'] = AMI
+        print(AMI)
 
         print("CluReAL:", a_name)
 
         def_m = 5
         def_e = distances[kni]
-        def_x = 0.1
+        def_x = 0.08
         algorithm = select_algorithm(a_name,def_m,def_e,int(dim_m*0.05),def_x)
         y = algorithm.fit_predict(X)
 
@@ -172,6 +173,7 @@ for d_ind, d_name in enumerate(data_names):
         df_val.loc[(d_name,a_name,'CRAL'), 'CH'] = CH
         df_val.loc[(d_name,a_name,'CRAL'), 'DB'] = DB
         df_val.loc[(d_name,a_name,'CRAL'), 'AMI'] = AMI
+        print(AMI)
 
         rc = cr.refinement_context(X,y,cc,gv)
 
