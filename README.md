@@ -26,7 +26,9 @@ Experiments consist on comparing the performance of (a) the best clustering obta
 
 <br>
 
-- **Datasets**. Datasets used in the experiments that were not generated with MDCGen (https://github.com/CN-TU/mdcgen-matlab) must be downloaded from the author's website: 
+### Datasets
+
+Datasets used in the experiments that were not generated with MDCGen (https://github.com/CN-TU/mdcgen-matlab) must be downloaded from the author's website: 
 
     http://cs.uef.fi/sipu/datasets/
 
@@ -60,12 +62,24 @@ Later, place them in the corresponding folder before running the scripts. In the
 
 Alternatively, you can remove these datasets from the scripts. 
 
-**Real datasets** (i.e., real_1, real_2, real_3, real_4) are obtained from the scikit.learn package and transformed with tSNE. The script to extract such datasets are in the [extra] folder:
+Finally, **real** datasets (i.e., real_1, real_2, real_3, real_4) are obtained from the scikit.learn package and transformed with tSNE. The script to extract such datasets are in the [extra] folder:
 
         $ python3 extract_real.py 
 
 <br>
    
+### Folders
+
+Create two folders called [plots] and [results] before running experiments.
+
+        $ mkdir plots 
+
+        $ mkdir results 
+
+<br>
+   
+### Experiments
+
 - **CluReAL vs k-Sweep (2D, k-means)**. Comparison of clustering optimization methods with 2D-data and k-means algorithm. Plots are saved in the [plots] folder.
 
         $ python3 2d_comparison_kmk.py
